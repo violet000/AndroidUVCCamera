@@ -40,6 +40,27 @@ uploadArchives {
             pom.artifactId = 'AndroidUVCCamera'
             pom.version = '1.0.0'
             pom.packaging = 'aar'
+            
+            // 添加Maven发布必需的POM文件配置
+            pom.project {
+                name 'AndroidUVCCamera'
+                description 'Android UVC Camera Library'
+                url 'https://github.com/violet000/AndroidUVCCamera'
+                
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                
+                developers {
+                    developer {
+                        id 'violet000'
+                        name 'violet000'
+                    }
+                }
+            }
         }
     }
 }

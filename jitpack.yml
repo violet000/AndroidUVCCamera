@@ -7,4 +7,5 @@ before_install:
   - echo "systemProp.http.proxyPort=" >> gradle.properties
 install:
   - ./gradlew clean
-  - ./gradlew uploadArchives
+  # 指定了要构建的uvccamerasdk模块
+  - ./gradlew :uvccamerasdk:uploadArchives
