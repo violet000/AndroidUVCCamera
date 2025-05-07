@@ -4,4 +4,5 @@ before_install:
   - chmod +x gradlew
 install:
   - ./gradlew clean
-  - ./gradlew :uvccamerasdk:publishToMavenLocal
+  - ./gradlew :uvccamerasdk:assembleRelease
+  - ./gradlew :uvccamerasdk:publishReleasePublicationToMavenLocal
