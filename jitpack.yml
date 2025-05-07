@@ -1,0 +1,10 @@
+jdk:
+  - openjdk8
+before_install:
+  - echo "systemProp.https.proxyHost=mirrors.opencas.cn" >> gradle.properties
+  - echo "systemProp.https.proxyPort=80" >> gradle.properties
+  - echo "systemProp.http.proxyHost=mirrors.opencas.cn" >> gradle.properties
+  - echo "systemProp.http.proxyPort=80" >> gradle.properties
+install:
+  - ./gradlew clean
+  - ./gradlew install

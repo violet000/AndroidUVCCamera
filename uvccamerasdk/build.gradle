@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 27
@@ -32,15 +32,13 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.violet000'
-                artifactId = 'AndroidUVCCamera'
-                version = '1.0.0'
-            }
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("${rootProject.projectDir}/maven"))
+            pom.groupId = 'com.github.violet000'
+            pom.artifactId = 'AndroidUVCCamera'
+            pom.version = '1.0.0'
         }
     }
 }
