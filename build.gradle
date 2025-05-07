@@ -25,6 +25,18 @@ allprojects {
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://jitpack.io' }
     }
+
+    // 添加NDK配置
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+// 添加NDK版本配置
+ext {
+    ndkVersion = "21.4.7075529"
 }
 
 task clean(type: Delete) {
