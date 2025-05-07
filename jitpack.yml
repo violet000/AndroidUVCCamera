@@ -1,11 +1,6 @@
 jdk:
   - openjdk8
 before_install:
-  - echo "systemProp.https.proxyHost=" >> gradle.properties
-  - echo "systemProp.https.proxyPort=" >> gradle.properties
-  - echo "systemProp.http.proxyHost=" >> gradle.properties
-  - echo "systemProp.http.proxyPort=" >> gradle.properties
+  - chmod +x gradlew
 install:
-  - ./gradlew clean
-  # 指定了要构建的uvccamerasdk模块
-  - ./gradlew :uvccamerasdk:assembleRelease
+  - ./gradlew install
