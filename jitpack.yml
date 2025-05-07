@@ -8,4 +8,4 @@ before_install:
 install:
   - ./gradlew clean
   # 指定了要构建的uvccamerasdk模块
-  - ./gradlew :uvccamerasdk:uploadArchives
+  - ./gradlew :uvccamerasdk:assembleRelease
