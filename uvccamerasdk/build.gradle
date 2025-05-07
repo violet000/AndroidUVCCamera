@@ -32,15 +32,13 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.violet000'
-                artifactId = 'AndroidUVCCamera'
-                version = '1.0.0'
-            }
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+            groupId = 'com.github.violet000'
+            artifactId = 'AndroidUVCCamera'
+            version = '1.0.0'
         }
     }
 }
