@@ -5,4 +5,4 @@ before_install:
 install:
   - ./gradlew clean
   - ./gradlew :uvccamerasdk:assembleRelease
-  - ./gradlew :uvccamerasdk:publishReleasePublicationToMavenLocal
+  - ./gradlew :uvccamerasdk:uploadArchives
