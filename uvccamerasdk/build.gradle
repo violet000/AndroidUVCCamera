@@ -44,7 +44,7 @@ uploadArchives {
             repository(url: uri("${rootProject.projectDir}/maven"))
             pom.groupId = 'com.github.violet000'
             pom.artifactId = 'AndroidUVCCamera'
-            pom.version = '1.0.0'
+            pom.version = '1.0.2'
         }
     }
 }
