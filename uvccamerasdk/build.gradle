@@ -12,10 +12,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        
-        ndk {
-            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-        }
     }
 
     buildTypes {
@@ -28,8 +24,6 @@ android {
     sourceSets.main {
         jniLibs.srcDirs = ['libs'];
     }
-    
-    ndkVersion "21.4.7075529"
 }
 
 dependencies {
@@ -44,7 +38,7 @@ uploadArchives {
             repository(url: uri("${rootProject.projectDir}/maven"))
             pom.groupId = 'com.github.violet000'
             pom.artifactId = 'AndroidUVCCamera'
-            pom.version = '1.0.2'
+            pom.version = '1.0.0'
         }
     }
 }

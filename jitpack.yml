@@ -1,9 +1,5 @@
 jdk:
   - openjdk8
-android:
-  buildToolsVersion: '30.0.3'
-  compileSdkVersion: 30
-  ndkVersion: '21.4.7075529'
 before_install:
   - echo "systemProp.https.proxyHost=" >> gradle.properties
   - echo "systemProp.https.proxyPort=" >> gradle.properties
