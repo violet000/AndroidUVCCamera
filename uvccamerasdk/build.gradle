@@ -39,6 +39,7 @@ uploadArchives {
             pom.groupId = 'com.github.violet000'
             pom.artifactId = 'AndroidUVCCamera'
             pom.version = '1.0.0'
+            pom.packaging = 'aar'
         }
     }
 }

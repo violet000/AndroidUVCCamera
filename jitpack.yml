@@ -7,4 +7,4 @@ before_install:
   - echo "systemProp.http.proxyPort=" >> gradle.properties
 install:
   - ./gradlew clean
-  - ./gradlew assembleRelease
+  - ./gradlew uploadArchives
