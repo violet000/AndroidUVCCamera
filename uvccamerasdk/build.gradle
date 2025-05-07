@@ -35,7 +35,7 @@ dependencies {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: uri("${rootProject.projectDir}/maven"))
+            repository(url: uri("${System.getProperty('user.home')}/.m2/repository"))
             pom.groupId = 'com.github.violet000'
             pom.artifactId = 'AndroidUVCCamera'
             pom.version = '1.0.0'
